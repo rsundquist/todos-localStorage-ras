@@ -1,26 +1,16 @@
-// localStorage.setItem('myName', 'Rebecca')
-// localStorage.setItem('petName', 'Max')
-// localStorage.setItem('petAge', 8)
+// select dom elements
+var newTodoForm = document.getElementById('new-todo-form')
+var newToDoInput = document.getElementById('new-todo')
+var toDoList = document.getElementById('todos-list')
 
-// localStorage.setItem('petAge', 1)
+var todos = []
 
-// var myName = localStorage.getItem('myName');
+function addTodo(event) {
+    event.preventDefault()
+    var newTodoText = newToDoInput.value
+    todos.push(newTodoText)
+    newToDoInput.value = ''
+}
 
-// var petName = localStorage.getItem('petName');
-
-// var petAge = localStorage.getItem('petAge');
-
-// console.log(myName, petName, petAge);
-
-// //localStorage.clear()
-
-// localStorage.removeItem('petName')
-
-var myArray = [1,2,3,4,5]
-
-localStorage.setItem('myArray', myArray);
-
-consolelog (typeof localStorage.getItem('myArray'))
-
-
+newTodoForm.addEventListener('submit', addTodo)
 
