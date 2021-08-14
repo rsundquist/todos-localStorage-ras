@@ -1,3 +1,39 @@
-body {
-    background-color: lightgrey;
+:root {
+    --light: lightgrey;
 }
+
+body {
+    background: var(--light);
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+input {
+    font-size: 38px;
+    padding: 10px;
+    color: var(--light)
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: darkslateblue;
+    cursor: pointer;
+}
+
+.container {
+    background-color: white;
+    max-width: 600px;
+    margin:60px auto;
+    padding: 15px;
+}
+
+#new-todo-form {
+    display: flex;
+}
+
+#new-todo {
+    display: flex-grow 1;
+  }
